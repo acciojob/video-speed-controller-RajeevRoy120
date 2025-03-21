@@ -1,45 +1,63 @@
 
 /* Your CSS Code here. */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #222;
-    color: white;
-    font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #222;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
-.wrapper {
-    position: relative;
-    width: 765px;
-    background: black;
-    padding: 10px;
-    border-radius: 10px;
+.player {
+  max-width: 750px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  font-size: 0;
+  overflow: hidden;
+  background: black;
 }
 
-video {
-    display: block;
-    width: 100%;
+.player__video {
+  width: 100%;
 }
 
-.speed {
-    width: 100%;
-    height: 30px;
-    background: gray;
-    position: relative;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px;
+.player__controls {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
 }
 
-.speed-bar {
-    width: 50%;
-    height: 100%;
-    background: red;
-    text-align: center;
-    font-size: 16px;
-    line-height: 30px;
-    color: white;
-    border-radius: 5px;
+.player__button {
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.player__slider {
+  width: 15%;
+  margin: 0 10px;
+}
+
+.progress {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.progress__filled {
+  width: 0;
+  height: 100%;
+  background: #ffc600;
+  border-radius: 4px;
 }
